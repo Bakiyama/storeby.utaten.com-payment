@@ -117,6 +117,20 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'sbps_payment' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/sbps/payment.log'),
+            'days' => 30,
+            'permission' => 0666,
+        ],
+
+        'sbps_payment_error' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/sbps/payment_error.log'),
+            'days' => 30,
+            'permission' => 0666,
+        ],
     ],
 
 ];
